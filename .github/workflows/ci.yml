@@ -39,7 +39,7 @@ jobs:
         ${{ github.workspace }}/.github/workflows/mac-post.sh
     - name: Versioning
       id: Versioning
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3.1.0
       with:
         name: Versioning
         path: |
@@ -47,21 +47,21 @@ jobs:
           ${{ github.workspace }}/latest_build_num.txt
     - name: macOS RELEASE Archive
       id: macOS-RELEASE-Archive
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3.1.0
       with:
         name: futurerestore-macOS-RELEASE
         path: |
           ${{ github.workspace }}/futurerestore-macOS-*-RELEASE.tar.xz
     - name: macOS DEBUG Archive
       id: macOS-DEBUG-Archive
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3.1.0
       with:
         name: futurerestore-macOS-DEBUG
         path: |
           ${{ github.workspace }}/futurerestore-macOS-*-DEBUG.tar.xz
     - name: macOS ASAN Archive
       id: macOS-ASAN-Archive
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3.1.0
       with:
         name: futurerestore-macOS-ASAN
         path: |
@@ -101,21 +101,21 @@ jobs:
           mv ${{ github.workspace }}/.github/workflows/futurerestore3.tar.xz ${{ github.workspace }}/.github/workflows/$(cat ${{ github.workspace }}/.github/workflows/name3.txt)
       - name: futurerestore Linux x86_64 RELEASE Archive
         id: futurerestore-Linux-x86_64-RELEASE-Archive
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3.1.0
         with:
           name: futurerestore-Linux-x86_64-RELEASE
           path: |
             ${{ github.workspace }}/.github/workflows/futurerestore-Linux-x86_64*-RELEASE.tar.xz
       - name: futurerestore Linux x86_64 DEBUG Archive
         id: futurerestore-Linux-x86_64-DEBUG-Archive
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3.1.0
         with:
           name: futurerestore-Linux-x86_64-DEBUG
           path: |
             ${{ github.workspace }}/.github/workflows/futurerestore-Linux-x86_64*-DEBUG.tar.xz
       - name: futurerestore Linux x86_64 ASAN Archive
         id: futurerestore-Linux-x86_64-ASAN-Archive
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3.1.0
         with:
           name: futurerestore-Linux-x86_64-ASAN
           path: |
